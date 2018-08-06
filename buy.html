@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EndlessEnergy</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123342671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123342671-1');
+</script>
+
+        
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBiQ2nH9Kq6PD2_MYJF589ZaRpaNGkSMjU",
+    authDomain: "endlessenergy-d80b0.firebaseapp.com",
+    databaseURL: "https://endlessenergy-d80b0.firebaseio.com",
+    projectId: "endlessenergy-d80b0",
+    storageBucket: "",
+    messagingSenderId: "952142322282"
+  };
+  firebase.initializeApp(config);
+</script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <link rel="stylesheet" href="Solar.css" type="text/css" />
+    </head>
+    
+    
+    
+    
+    
+    <body>
+    
+    <nav class="navbar">
+  <a class="navbar-brand" href="Solar.html"><img src="Energy.png" style="width:19%; length:7%;"/></a>
+      
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <h4>Click the grey box to jump to the top.</h4>
+    <ul class="navbar-nav">
+    
+    </ul>
+  </div>
+</nav>
+        <div class='buy'>
+            Buy your EndlessEnergy here! 
+        </div>
+    
+    
+    
+    
+    <div class="pay">
+  <div id="paypal-button"></div>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+paypal.Button.render({
+  // Configure environment
+  env: 'sandbox',
+  client: {
+    sandbox: 'demo_sandbox_client_id',
+    production: 'demo_production_client_id'
+  },
+  // Customize button (optional)
+  locale: 'en_US',
+  style: {
+    size: 'large',
+    color: 'gold',
+    shape: 'pill',
+  },
+  // Set up a payment
+  payment: function (data, actions) {
+    return actions.payment.create({
+      transactions: [{
+        amount: {
+          total: '24.99',
+          currency: 'USD'
+        }
+      }]
+    });
+  },
+  // Execute the payment
+  onAuthorize: function (data, actions) {
+    return actions.payment.execute()
+      .then(function () {
+        // Show a confirmation message to the buyer
+        window.alert('Thank you for your purchase!');
+      });
+  }
+}, '#paypal-button');
+</script>
+</div>
+
+<div id='or'>
+  - OR -
+</div>
+
+<div id='check'>
+  <div class="jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Payment with credit/debit card</h1>
+              <p class="lead">
+                <form action="POST">
+                  <div class="form-group">
+                    <label for="postingTitle">Credit/Debit Card number</label>
+                    <input type="text" class="form-control" id="postingTitle">
+                    <small class="form-text text-muted">This is to recieve your payment.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="postingDescription">Address</label>
+                     <small class="form-text text-muted">This is to ship it to you.</small>
+                    <textarea type="password" class="form-control" id="postingDescription" rows="3"></textarea>
+                  </div>
+                  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </p>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+
+
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="Solar.js"></script>
+    </body>
+
+
+
+
+</html>

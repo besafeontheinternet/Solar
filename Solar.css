@@ -1,0 +1,51 @@
+.buy{
+    font-size:5.5rem;
+    padding-top:2rem;
+    padding-left:8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight:100
+}
+
+body{
+       background-image: linear-gradient(to right, #74f2c1, #93e590, #b5d364, #d6be43, #f5a339);
+       
+      color:white;
+}
+
+.jumbotext{
+    background-image: linear-gradient(to right, #74f2c1, #93e590, #b5d364, #d6be43, #f5a339);
+    padding-top:1rem;
+    font-weight: bold
+}
+
+#submit{
+}
+
+#paypal-button{
+    margin-left:65vh;
+    font-size:30rem;
+    margin-top:5rem;
+}
+
+#cardtwo{
+    margin-top:10vh;
+}
+
+#cardthree{
+    margin-top:10vh;
+}
+
+#or{
+    font-size:3rem;
+    margin-top:10vh;
+    margin-left:77.5vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+#check{
+    font-size:1.5rem;
+     margin-top:10vh;
+    margin-left:20vh;
+    font-family: 'Raleway', sans-serif;
+}
+
